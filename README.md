@@ -1,16 +1,17 @@
-## Hi there 👋
+# Personal Portfolio
 
-<!--
-**nolandex/Nolandex** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+A modern, fully responsive personal portfolio website built with HTML, CSS, and JavaScript. Hosted on GitHub Pages.
 
-Here are some ideas to get you started:
+## Features
+- Sticky header with hamburger menu for mobile
+- Animated hero section with CTA
+- About section with animated skill bars
+- Portfolio grid with hover effects
+- Contact form with validation
+- Smooth scrolling and scroll-to-top button
+- Dark theme with blue accents
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/portfolio.git
