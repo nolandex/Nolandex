@@ -1,4 +1,4 @@
-// Contact Form Validation and Submission
+// Contact Form Validation
 const contactForm = document.getElementById('contactForm');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
@@ -8,7 +8,7 @@ const emailError = document.getElementById('email-error');
 const messageError = document.getElementById('message-error');
 const formStatus = document.getElementById('form-status');
 
-// Form Validation
+// Validation Functions
 function validateName() {
     const name = nameInput.value.trim();
     if (name === '') {
@@ -76,7 +76,6 @@ contactForm.addEventListener('submit', async (e) => {
         const formData = new FormData(contactForm);
         
         try {
-            // Using Formspree for form submission
             const response = await fetch('https://formspree.io/f/your-form-id', {
                 method: 'POST',
                 body: formData,
@@ -91,7 +90,6 @@ contactForm.addEventListener('submit', async (e) => {
                 formStatus.style.display = 'block';
                 contactForm.reset();
                 
-                // Hide success message after 5 seconds
                 setTimeout(() => {
                     formStatus.style.display = 'none';
                 }, 5000);
@@ -103,47 +101,9 @@ contactForm.addEventListener('submit', async (e) => {
             formStatus.classList.add('error');
             formStatus.style.display = 'block';
             
-            // Hide error message after 5 seconds
             setTimeout(() => {
                 formStatus.style.display = 'none';
             }, 5000);
         }
     }
 });
-
-// Alternative using EmailJS (uncomment to use)
-/*
-(function() {
-    emailjs.init('your-user-id'); // Initialize with your EmailJS user ID
-    
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const isNameValid = validateName();
-        const isEmailValid = validateEmail();
-        const isMessageValid = validateMessage();
-        
-        if (isNameValid && isEmailValid && isMessageValid) {
-            emailjs.sendForm('your-service-id', 'your-template-id', this)
-                .then(function() {
-                    formStatus.textContent = 'Thank you! Your message has been sent.';
-                    formStatus.classList.add('success');
-                    formStatus.style.display = 'block';
-                    contactForm.reset();
-                    
-                    setTimeout(() => {
-                        formStatus.style.display = 'none';
-                    }, 5000);
-                }, function(error) {
-                    formStatus.textContent = 'Oops! There was a problem sending your message. Please try again later.';
-                    formStatus.classList.add('error');
-                    formStatus.style.display = 'block';
-                    
-                    setTimeout(() => {
-                        formStatus.style.display = 'none';
-                    }, 5000);
-                });
-        }
-    });
-})();
-*/
