@@ -1,77 +1,39 @@
-/* Animations for Scroll Effects */
+/* ANIMATION STYLES */
 [data-animate] {
     opacity: 0;
     transition: all 0.6s ease-out;
-    will-change: transform, opacity;
 }
 
-/* Keyframe Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+[data-animate="fadeIn"] {
+    transform: translateY(20px);
 }
 
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+[data-animate="fadeInUp"] {
+    transform: translateY(30px);
 }
 
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+[data-animate="fadeInLeft"] {
+    transform: translateX(-30px);
 }
 
-@keyframes scaleIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+[data-animate="fadeInRight"] {
+    transform: translateX(30px);
 }
 
-/* Animation Classes */
-.animate-fadeInUp {
-    animation: fadeInUp 0.8s ease-out forwards;
+.animate {
+    opacity: 1;
+    transform: translate(0, 0) !important;
 }
 
-.animate-fadeInLeft {
-    animation: fadeInLeft 0.8s ease-out forwards;
+/* Delay classes */
+.delay-100 {
+    transition-delay: 100ms;
 }
 
-.animate-fadeInRight {
-    animation: fadeInRight 0.8s ease-out forwards;
+.delay-200 {
+    transition-delay: 200ms;
 }
 
-.animate-scaleIn {
-    animation: scaleIn 0.6s ease-out forwards;
-}
-
-/* Reduced Motion Preference */
-@media (prefers-reduced-motion: reduce) {
-    [data-animate] {
-        opacity: 1;
-        transition: none;
-        animation: none;
-    }
+.delay-300 {
+    transition-delay: 300ms;
 }
