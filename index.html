@@ -3,136 +3,416 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Tech Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tech Portfolio | Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header class="header">
         <div class="container">
-            <h1>My Tech Portfolio</h1>
-            <nav>
+            <div class="logo" data-aos="fade-down">
+                <span class="code-tag">&lt;</span>DevPortfolio<span class="code-tag">/&gt;</span>
+            </div>
+            <nav class="nav">
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li data-aos="fade-down" data-aos-delay="100"><a href="#home">Home</a></li>
+                    <li data-aos="fade-down" data-aos-delay="200"><a href="#about">About</a></li>
+                    <li data-aos="fade-down" data-aos-delay="300"><a href="#skills">Skills</a></li>
+                    <li data-aos="fade-down" data-aos-delay="400"><a href="#projects">Projects</a></li>
+                    <li data-aos="fade-down" data-aos-delay="500"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <div class="menu-toggle" data-aos="fade-down">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </header>
 
-    <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Hi, I'm a Tech Enthusiast</h1>
-                <p>Exploring the world of code and innovation.</p>
-                <a href="#projects" class="button">View My Projects</a>
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 data-aos="fade-right" data-aos-delay="300">
+                        <span class="code-tag">&lt;h1&gt;</span>
+                        Hi, I'm <span class="highlight">Developer</span>
+                        <span class="code-tag">&lt;/h1&gt;</span>
+                    </h1>
+                    <h2 data-aos="fade-right" data-aos-delay="400">
+                        <span class="code-tag">&lt;p&gt;</span>
+                        Full Stack <span class="typing"></span>
+                        <span class="code-tag">&lt;/p&gt;</span>
+                    </h2>
+                    <div class="hero-btns" data-aos="fade-up" data-aos-delay="500">
+                        <a href="#projects" class="btn primary">View My Work</a>
+                        <a href="#contact" class="btn secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-image" data-aos="fade-left" data-aos-delay="600">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="window-buttons">
+                                <span class="red"></span>
+                                <span class="yellow"></span>
+                                <span class="green"></span>
+                            </div>
+                            <div class="window-title">portfolio.js</div>
+                        </div>
+                        <div class="window-body">
+                            <pre><code class="javascript">const portfolio = {
+    name: "Developer",
+    skills: ["JavaScript", "React", "Node.js", "Python"],
+    experience: "5+ years",
+    projects: 24,
+    contact: "dev@example.com"
+};
+
+function greet() {
+    console.log("Welcome to my portfolio!");
+}
+
+greet();</code></pre>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="hero-image">
-                <img src="images/coding.svg" alt="Coding Illustration">
+            <div class="hero-scroll">
+                <span>Scroll Down</span>
+                <div class="scroll-animation"></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="about section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <p>I'm passionate about building innovative and user-friendly applications. With a strong foundation in web development and a keen interest in emerging technologies, I strive to create impactful digital experiences. I enjoy problem-solving and continuously learning new skills to stay at the forefront of the tech industry.</p>
-                <p>This portfolio showcases some of my projects and skills. Feel free to explore and get in touch!</p>
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">
+                    <span class="code-tag">&lt;h2&gt;</span>
+                    About Me
+                    <span class="code-tag">&lt;/h2&gt;</span>
+                </h2>
+                <div class="about-content">
+                    <div class="about-image" data-aos="fade-right">
+                        <div class="hexagon">
+                            <div class="hexagon-inner">
+                                <img src="https://via.placeholder.com/400" alt="Developer">
+                            </div>
+                            <div class="hexagon-border"></div>
+                        </div>
+                        <div class="tech-icons">
+                            <i class="fab fa-js" data-aos="zoom-in" data-aos-delay="100"></i>
+                            <i class="fab fa-react" data-aos="zoom-in" data-aos-delay="200"></i>
+                            <i class="fab fa-node-js" data-aos="zoom-in" data-aos-delay="300"></i>
+                            <i class="fab fa-python" data-aos="zoom-in" data-aos-delay="400"></i>
+                        </div>
+                    </div>
+                    <div class="about-text" data-aos="fade-left">
+                        <h3>
+                            <span class="code-tag">&lt;h3&gt;</span>
+                            Who am I?
+                            <span class="code-tag">&lt;/h3&gt;</span>
+                        </h3>
+                        <p>
+                            <span class="code-tag">&lt;p&gt;</span>
+                            I'm a passionate full-stack developer with 5+ years of experience creating web applications. I specialize in JavaScript technologies across the whole stack (React.js, Node.js, Express, MongoDB).
+                            <span class="code-tag">&lt;/p&gt;</span>
+                        </p>
+                        <p>
+                            <span class="code-tag">&lt;p&gt;</span>
+                            My journey in tech started when I built my first website at 15. Since then, I've worked with startups and established companies to deliver high-quality, scalable solutions.
+                            <span class="code-tag">&lt;/p&gt;</span>
+                        </p>
+                        <div class="about-info">
+                            <div class="info-item">
+                                <span>Name:</span>
+                                <span>Developer Name</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Email:</span>
+                                <span>dev@example.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span>Experience:</span>
+                                <span>5+ Years</span>
+                            </div>
+                            <div class="info-item">
+                                <span>From:</span>
+                                <span>San Francisco, CA</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn primary" data-aos="fade-up">Download CV</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="projects section">
-        <div class="container">
-            <h2>My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="images/project1.jpg" alt="Project 1">
-                    <h3>Project Title 1</h3>
-                    <p>Brief description of project 1. Technologies used: HTML, CSS, JavaScript.</p>
-                    <a href="#" target="_blank">View Live</a>
-                    <a href="https://github.com/your-username/repo1" target="_blank">GitHub Repo</a>
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">
+                    <span class="code-tag">&lt;h2&gt;</span>
+                    My Skills
+                    <span class="code-tag">&lt;/h2&gt;</span>
+                </h2>
+                <div class="skills-content">
+                    <div class="skills-left" data-aos="fade-right">
+                        <h3>
+                            <span class="code-tag">&lt;h3&gt;</span>
+                            My creative skills & experiences.
+                            <span class="code-tag">&lt;/h3&gt;</span>
+                        </h3>
+                        <p>
+                            <span class="code-tag">&lt;p&gt;</span>
+                            I've worked with a variety of technologies in web development. Here are some of my core skills and technologies I work with regularly.
+                            <span class="code-tag">&lt;/p&gt;</span>
+                        </p>
+                        <div class="skill-bars">
+                            <div class="bar" data-aos="fade-right" data-aos-delay="100">
+                                <div class="info">
+                                    <span>JavaScript</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="line javascript"><span></span></div>
+                            </div>
+                            <div class="bar" data-aos="fade-right" data-aos-delay="200">
+                                <div class="info">
+                                    <span>React</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="line react"><span></span></div>
+                            </div>
+                            <div class="bar" data-aos="fade-right" data-aos-delay="300">
+                                <div class="info">
+                                    <span>Node.js</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="line node"><span></span></div>
+                            </div>
+                            <div class="bar" data-aos="fade-right" data-aos-delay="400">
+                                <div class="info">
+                                    <span>Python</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="line python"><span></span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-right" data-aos="fade-left">
+                        <div class="skills-radar">
+                            <canvas id="skillsChart"></canvas>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <img src="images/project2.jpg" alt="Project 2">
-                    <h3>Project Title 2</h3>
-                    <p>Brief description of project 2. Technologies used: React, Node.js, Express.</p>
-                    <a href="#" target="_blank">View Live</a>
-                    <a href="https://github.com/your-username/repo2" target="_blank">GitHub Repo</a>
-                </div>
-                <div class="project-card">
-                    <img src="images/project3.jpg" alt="Project 3">
-                    <h3>Project Title 3</h3>
-                    <p>Brief description of project 3. Technologies used: Python, Django, PostgreSQL.</p>
-                    <a href="#" target="_blank">View Live</a>
-                    <a href="https://github.com/your-username/repo3" target="_blank">GitHub Repo</a>
-                </div>
-                </div>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <section id="skills" class="skills section">
-        <div class="container">
-            <h2>My Skills</h2>
-            <div class="skills-list">
-                <div class="skill-item">
-                    <img src="images/html.svg" alt="HTML">
-                    <span>HTML5</span>
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">
+                    <span class="code-tag">&lt;h2&gt;</span>
+                    My Projects
+                    <span class="code-tag">&lt;/h2&gt;</span>
+                </h2>
+                <div class="projects-filter" data-aos="fade-up">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
                 </div>
-                <div class="skill-item">
-                    <img src="images/css.svg" alt="CSS">
-                    <span>CSS3</span>
+                <div class="projects-grid">
+                    <div class="project-card" data-aos="flip-up" data-category="web">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Project 1">
+                            <div class="project-overlay">
+                                <h3>E-commerce Platform</h3>
+                                <p>React, Node.js, MongoDB</p>
+                                <div class="project-links">
+                                    <a href="#"><i class="fas fa-link"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="flip-up" data-aos-delay="100" data-category="mobile">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Project 2">
+                            <div class="project-overlay">
+                                <h3>Fitness App</h3>
+                                <p>React Native, Firebase</p>
+                                <div class="project-links">
+                                    <a href="#"><i class="fas fa-link"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="flip-up" data-aos-delay="200" data-category="web">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Project 3">
+                            <div class="project-overlay">
+                                <h3>Project Management Tool</h3>
+                                <p>Vue.js, Express, PostgreSQL</p>
+                                <div class="project-links">
+                                    <a href="#"><i class="fas fa-link"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="flip-up" data-aos-delay="300" data-category="design">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Project 4">
+                            <div class="project-overlay">
+                                <h3>UI/UX Design</h3>
+                                <p>Figma, Adobe XD</p>
+                                <div class="project-links">
+                                    <a href="#"><i class="fas fa-link"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="flip-up" data-aos-delay="400" data-category="web">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Project 5">
+                            <div class="project-overlay">
+                                <h3>Social Media Dashboard</h3>
+                                <p>React, GraphQL, Node.js</p>
+                                <div class="project-links">
+                                    <a href="#"><i class="fas fa-link"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="flip-up" data-aos-delay="500" data-category="mobile">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Project 6">
+                            <div class="project-overlay">
+                                <h3>Travel App</h3>
+                                <p>Flutter, Firebase</p>
+                                <div class="project-links">
+                                    <a href="#"><i class="fas fa-link"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-item">
-                    <img src="images/javascript.svg" alt="JavaScript">
-                    <span>JavaScript</span>
-                </div>
-                <div class="skill-item">
-                    <img src="images/react.svg" alt="React">
-                    <span>React</span>
-                </div>
-                <div class="skill-item">
-                    <img src="images/nodejs.svg" alt="Node.js">
-                    <span>Node.js</span>
-                </div>
-                <div class="skill-item">
-                    <img src="images/python.svg" alt="Python">
-                    <span>Python</span>
-                </div>
-                </div>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <section id="contact" class="contact section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out for collaborations or just a friendly chat!</p>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">
+                    <span class="code-tag">&lt;h2&gt;</span>
+                    Contact Me
+                    <span class="code-tag">&lt;/h2&gt;</span>
+                </h2>
+                <div class="contact-content">
+                    <div class="contact-left" data-aos="fade-right">
+                        <h3>
+                            <span class="code-tag">&lt;h3&gt;</span>
+                            Get in Touch
+                            <span class="code-tag">&lt;/h3&gt;</span>
+                        </h3>
+                        <p>
+                            <span class="code-tag">&lt;p&gt;</span>
+                            Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
+                            <span class="code-tag">&lt;/p&gt;</span>
+                        </p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span>Name</span>
+                                    <span>Developer Name</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span>Address</span>
+                                    <span>San Francisco, CA</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <span>Email</span>
+                                    <span>dev@example.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-right" data-aos="fade-left">
+                        <h3>
+                            <span class="code-tag">&lt;h3&gt;</span>
+                            Message Me
+                            <span class="code-tag">&lt;/h3&gt;</span>
+                        </h3>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Subject">
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn primary">Send Message</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="button">Send Message</button>
-            </form>
-        </div>
-    </section>
+            </div>
+        </section>
+    </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 My Tech Portfolio. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="code-tag">&lt;</span>DevPortfolio<span class="code-tag">/&gt;</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> DevPortfolio. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>
 </body>
-</html>
+                        </html>
