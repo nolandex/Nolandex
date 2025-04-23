@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>John Doe - Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/images/logo.png">
 </head>
@@ -11,12 +11,13 @@
     <!-- Header / Navbar -->
     <header class="header">
         <div class="container">
-            <a href="#" class="logo">Your Name</a>
+            <a href="#" class="logo">John Doe</a>
             <nav class="navbar">
                 <ul class="nav-links">
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
                 <div class="hamburger">
@@ -30,13 +31,13 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div id="particles-js" class="hero-bg"></div>
         <div class="container">
-            <h1 class="hero-title">Hi, I’m <span>Your Name</span></h1>
-            <p class="hero-subtitle">Web Developer & Designer</p>
-            <p class="hero-text">I craft beautiful and functional web experiences.</p>
+            <h1 class="hero-title">Hi, I’m <span>John Doe</span></h1>
+            <p class="hero-subtitle"><span class="typing"></span></p>
+            <p class="hero-text">I craft beautiful and functional web experiences with creativity and precision.</p>
             <a href="assets/cv/cv.pdf" class="btn" download>Download CV</a>
         </div>
-        <div class="hero-bg"></div>
     </section>
 
     <!-- About Section -->
@@ -44,24 +45,32 @@
         <div class="container">
             <h2>About Me</h2>
             <div class="about-content">
-                <img src="assets/images/profile.jpg" alt="Profile" class="about-img">
+                <div class="about-img-wrapper">
+                    <img src="assets/images/profile.jpg" alt="Profile" class="about-img">
+                </div>
                 <div class="about-text">
-                    <p>Hi! I'm a passionate web developer with a knack for creating responsive and user-friendly websites. I specialize in front-end development and love experimenting with animations and modern design trends.</p>
+                    <p>Hi! I’m a passionate web developer with a knack for creating responsive and user-friendly websites. I specialize in front-end development and love experimenting with animations and modern design trends.</p>
                     <h3>Skills</h3>
-                    <ul class="skills-list">
-                        <li>
-                            <span>HTML & CSS</span>
-                            <div class="skill-bar"><div class="progress" style="width: 90%;"></div></div>
-                        </li>
-                        <li>
-                            <span>JavaScript</span>
-                            <div class="skill-bar"><div class="progress" style="width: 85%;"></div></div>
-                        </li>
-                        <li>
-                            <span>React</span>
-                            <div class="skill-bar"><div class="progress" style="width: 70%;"></div></div>
-                        </li>
-                    </ul>
+                    <div class="skills-list">
+                        <div class="skill">
+                            <div class="circular-progress" data-percentage="90">
+                                <span class="percentage">90%</span>
+                            </div>
+                            <p>HTML & CSS</p>
+                        </div>
+                        <div class="skill">
+                            <div class="circular-progress" data-percentage="85">
+                                <span class="percentage">85%</span>
+                            </div>
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="skill">
+                            <div class="circular-progress" data-percentage="70">
+                                <span class="percentage">70%</span>
+                            </div>
+                            <p>React</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,41 +80,87 @@
     <section id="portfolio" class="portfolio">
         <div class="container">
             <h2>Portfolio</h2>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="app">App</button>
+            </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="assets/images/project1.jpg" alt="Project 1">
+                <div class="portfolio-item" data-category="web">
+                    <img src="assets/images/project1.jpg" alt="E-commerce Site">
                     <div class="portfolio-overlay">
-                        <h3>Project Title</h3>
-                        <p>Short description of the project.</p>
-                        <p><strong>Tech:</strong> HTML, CSS, JS</p>
-                        <a href="#" class="btn">View Project</a>
+                        <h3>E-commerce Site</h3>
+                        <p>Built a responsive online store.</p>
+                        <button class="btn view-details" data-project="project1">View Details</button>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="assets/images/project2.jpg" alt="Project 2">
+                <div class="portfolio-item" data-category="app">
+                    <img src="assets/images/project2.jpg" alt="Task Manager App">
                     <div class="portfolio-overlay">
-                        <h3>Project Title</h3>
-                        <p>Short description of the project.</p>
-                        <p><strong>Tech:</strong> HTML, CSS, JS</p>
-                        <a href="#" class="btn">View Project</a>
+                        <h3>Task Manager App</h3>
+                        <p>A productivity app for task management.</p>
+                        <button class="btn view-details" data-project="project2">View Details</button>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="assets/images/project3.jpg" alt="Project 3">
+                <div class="portfolio-item" data-category="web">
+                    <img src="assets/images/project3.jpg" alt="Portfolio Site">
                     <div class="portfolio-overlay">
-                        <h3>Project Title</h3>
-                        <p>Short description of the project.</p>
-                        <p><strong>Tech:</strong> HTML, CSS, JS</p>
-                        <a href="#" class="btn">View Project</a>
+                        <h3>Portfolio Site</h3>
+                        <p>Personal portfolio with animations.</p>
+                        <button class="btn view-details" data-project="project3">View Details</button>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="assets/images/project4.jpg" alt="Project 4">
+                <div class="portfolio-item" data-category="app">
+                    <img src="assets/images/project4.jpg" alt="Weather App">
                     <div class="portfolio-overlay">
-                        <h3>Project Title</h3>
-                        <p>Short description of the project.</p>
-                        <p><strong>Tech:</strong> HTML, CSS, JS</p>
-                        <a href="#" class="btn">View Project</a>
+                        <h3>Weather App</h3>
+                        <p>Real-time weather updates.</p>
+                        <button class="btn view-details" data-project="project4">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Project Details -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-carousel">
+                <img src="assets/images/project1.jpg" alt="Project Image" class="carousel-img">
+                <button class="carousel-prev">&larr;</button>
+                <button class="carousel-next">&rarr;</button>
+            </div>
+            <h3 class="modal-title"></h3>
+            <p class="modal-description"></p>
+            <a href="#" class="btn modal-link">Visit Project</a>
+        </div>
+    </div>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Front-End Developer</h3>
+                        <p>Tech Corp | 2023 - Present</p>
+                        <p>Developed responsive web applications and collaborated with design teams.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Junior Developer</h3>
+                        <p>Startup Inc | 2021 - 2023</p>
+                        <p>Built and maintained client websites using HTML, CSS, and JavaScript.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Intern</h3>
+                        <p>Web Agency | 2020 - 2021</p>
+                        <p>Assisted in creating UI designs and learned front-end development.</p>
                     </div>
                 </div>
             </div>
@@ -117,27 +172,37 @@
         <div class="container">
             <h2>Contact Me</h2>
             <form id="contact-form" class="contact-form">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" placeholder="Your Message" required></textarea>
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Your Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" required></textarea>
+                    <label for="message">Your Message</label>
+                </div>
                 <button type="submit" class="btn">Send Message</button>
             </form>
             <div class="social-links">
-                <a href="#" class="social-icon">GitHub</a>
-                <a href="#" class="social-icon">LinkedIn</a>
-                <a href="#" class="social-icon">Twitter</a>
+                <a href="https://github.com/your-username" class="social-icon ripple">GitHub</a>
+                <a href="https://linkedin.com/in/your-username" class="social-icon ripple">LinkedIn</a>
+                <a href="https://twitter.com/your-username" class="social-icon ripple">Twitter</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="wave"></div>
         <div class="container">
-            <p>&copy; 2025 Your Name. All rights reserved.</p>
+            <p>© 2025 John Doe. All rights reserved.</p>
             <a href="#home" class="scroll-top">↑</a>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
 </body>
-</html>
+        </html>
