@@ -1,106 +1,165 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio website showcasing skills, projects, and contact information.">
-    <title>My Portfolio</title>
+    <meta name="description" content="Personal portfolio of [Your Name], a web developer specializing in modern web technologies.">
+    <meta name="keywords" content="portfolio, web developer, technology, projects">
+    <meta name="author" content="[Your Name]">
+    <title>[Your Name] | Tech Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="logo">MyPortfolio</div>
-        <nav class="nav-links">
-            <ul>
+    <header class="header">
+        <div class="logo">[Your Name]</div>
+        <nav class="nav">
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="theme-toggle">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle" class="theme-icon">🌙</label>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </nav>
-        <button class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
-        <div class="hamburger">☰</div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1 class="hero-title">Hi, I'm John Doe</h1>
-        <p class="hero-subtitle">Web Developer</p>
-        <a href="#contact" class="btn contact-btn">Contact Me</a>
+    <section id="home" class="section hero">
+        <div class="hero-content">
+            <h1 class="animate-slide-in">Hi, I'm <span class="highlight">[Your Name]</span></h1>
+            <p class="animate-fade-in">A <span class="highlight">Web Developer</span> Crafting Innovative Digital Solutions</p>
+            <a href="#projects" class="btn animate-bounce-in">Explore My Work</a>
+        </div>
+        <div class="hero-bg"></div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="section about">
+        <h2 class="animate-slide-in">About Me</h2>
         <div class="about-content">
-            <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-img">
+            <img src="assets/images/profile.jpg" alt="Profile Picture" class="profile-img animate-float">
             <div class="about-text">
-                <h2>About Me</h2>
-                <p>I'm a passionate web developer with expertise in creating modern, responsive websites. I love turning ideas into reality through code.</p>
-                <h3>Skills</h3>
-                <ul class="skills-list">
-                    <li>HTML & CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Node.js</li>
-                </ul>
+                <p class="animate-fade-in">I'm a passionate web developer with expertise in creating responsive, user-friendly applications. My focus is on delivering high-quality code and innovative solutions that drive impact.</p>
+                <p class="animate-fade-in delay-1">With a strong foundation in HTML, CSS, and JavaScript, I enjoy exploring new technologies and building projects that solve real-world problems.</p>
+                <a href="assets/resume.pdf" class="btn animate-bounce-in">Download Resume</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <h2 class="animate-slide-in">My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card animate-scale-in">HTML5</div>
+            <div class="skill-card animate-scale-in delay-1">CSS3</div>
+            <div class="skill-card animate-scale-in delay-2">JavaScript</div>
+            <div class="skill-card animate-scale-in delay-3">React</div>
+            <div class="skill-card animate-scale-in delay-4">Node.js</div>
+            <div class="skill-card animate-scale-in delay-5">Git</div>
+            <div class="skill-card animate-scale-in delay-6">MongoDB</div>
+            <div class="skill-card animate-scale-in delay-7">Express.js</div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Project 1">
+    <section id="projects" class="section projects">
+        <h2 class="animate-slide-in">My Projects</h2>
+        <div class="project-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="app">App</button>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card animate-scale-in" data-category="web">
+                <img src="assets/images/project1.jpg" alt="Project 1">
                 <h3>Project One</h3>
-                <p>A responsive e-commerce website built with React and Node.js.</p>
-                <a href="#" class="btn">View Project</a>
+                <p>A dynamic web app built with React and Node.js.</p>
+                <button class="btn project-btn" data-modal="modal1">View Details</button>
             </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Project 2">
+            <div class="project-card animate-scale-in delay-1" data-category="app">
+                <img src="assets/images/project2.jpg" alt="Project 2">
                 <h3>Project Two</h3>
-                <p>A portfolio website with modern animations and dark mode.</p>
-                <a href="#" class="btn">View Project</a>
+                <p>An e-commerce platform with payment integration.</p>
+                <button class="btn project-btn" data-modal="modal2">View Details</button>
             </div>
-            <div class="project-card">
-                <img src="https://via.placeholder.com/300x200" alt="Project 3">
+            <div class="project-card animate-scale-in delay-2" data-category="web">
+                <img src="assets/images/project3.jpg" alt="Project 3">
                 <h3>Project Three</h3>
-                <p>A task management app with real-time collaboration.</p>
-                <a href="#" class="btn">View Project</a>
+                <p>A portfolio website with advanced animations.</p>
+                <button class="btn project-btn" data-modal="modal3">View Details</button>
             </div>
         </div>
     </section>
 
+    <!-- Project Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content animate-scale-in">
+            <span class="modal-close">&times;</span>
+            <h3>Project One</h3>
+            <img src="assets/images/project1.jpg" alt="Project 1">
+            <p>This is a dynamic web application built with React and Node.js, featuring real-time data updates and a responsive design.</p>
+            <a href="#" class="btn">Visit Project</a>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content animate-scale-in">
+            <span class="modal-close">&times;</span>
+            <h3>Project Two</h3>
+            <img src="assets/images/project2.jpg" alt="Project 2">
+            <p>An e-commerce platform with secure payment integration and a user-friendly interface.</p>
+            <a href="#" class="btn">Visit Project</a>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content animate-scale-in">
+            <span class="modal-close">&times;</span>
+            <h3>Project Three</h3>
+            <img src="assets/images/project3.jpg" alt="Project 3">
+            <p>A modern portfolio website showcasing advanced CSS and JavaScript animations.</p>
+            <a href="#" class="btn">Visit Project</a>
+        </div>
+    </div>
+
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
+    <section id="contact" class="section contact">
+        <h2 class="animate-slide-in">Get in Touch</h2>
+        <form id="contact-form" class="animate-fade-in">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
+            <button type="submit" class="btn animate-bounce-in">Send Message</button>
         </form>
-        <div class="social-links">
-            <a href="#"><img src="https://via.placeholder.com/30" alt="LinkedIn"></a>
-            <a href="#"><img src="https://via.placeholder.com/30" alt="GitHub"></a>
-            <a href="#"><img src="https://via.placeholder.com/30" alt="Twitter"></a>
+        <div class="contact-links animate-fade-in delay-1">
+            <a href="mailto:nolandexco@gmail.com" class="contact-link">Email</a>
+            <a href="https://wa.me/1234567890" class="contact-link">WhatsApp</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 MyPortfolio. All rights reserved.</p>
-        <ul class="footer-nav">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <footer class="footer">
+        <p>&copy; 2025 [Your Name]. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#" class="social-link"><img src="assets/icons/github.svg" alt="GitHub"></a>
+            <a href="#" class="social-link"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+            <a href="#" class="social-link"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+        </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn">↑</button>
 
     <script src="script.js"></script>
 </body>
