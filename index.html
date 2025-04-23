@@ -1,100 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NolanDex Landing Page</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A modern, responsive landing page for showcasing innovative solutions.">
+    <meta name="keywords" content="landing page, responsive, modern, technology, business">
+    <meta name="author" content="Your Name">
+    <title>Modern Landing Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Welcome to NolanDex</h1>
-      <p>Complete Online Business Setup, Simplified.</p>
-      <a href="#contact" class="cta">Get Started</a>
+    <!-- Loading Animation -->
+    <div class="loader">
+        <div class="spinner"></div>
     </div>
-  </header>
 
-  <nav>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section id="about">
-    <div class="container">
-      <h2>About NolanDex</h2>
-      <p>NolanDex helps you launch a full online business setup including branding, landing page, automation, and more — fast and easy.</p>
-    </div>
-  </section>
-
-  <section id="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="services-grid">
-        <div class="service-box">
-          <h3>Branding</h3>
-          <p>Create your brand identity and visual system.</p>
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Brand Logo" class="logo-img">
         </div>
-        <div class="service-box">
-          <h3>Landing Page</h3>
-          <p>Responsive and modern landing pages optimized for conversions.</p>
+        <ul class="nav-links" role="menubar">
+            <li role="none"><a href="#home" role="menuitem" aria-label="Home section">Home</a></li>
+            <li role="none"><a href="#features" role="menuitem" aria-label="Features section">Features</a></li>
+            <li role="none"><a href="#about" role="menuitem" aria-label="About section">About</a></li>
+            <li role="none"><a href="#testimonials" role="menuitem" aria-label="Testimonials section">Testimonials</a></li>
+            <li role="none"><a href="#contact" role="menuitem" aria-label="Contact section">Contact</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" role="banner">
+        <div class="hero-content">
+            <h1 class="animate-slide-in">Empower Your Future</h1>
+            <p class="animate-fade-in">Join us to explore innovative solutions that transform businesses.</p>
+            <a href="#contact" class="cta-button animate-pulse" role="button" aria-label="Get started with our services">Get Started</a>
         </div>
-        <div class="service-box">
-          <h3>Automation</h3>
-          <p>Integrate with WhatsApp, email marketing, and more.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features" role="region" aria-label="Features">
+        <h2 class="section-title animate-slide-up">Our Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card animate-scale" tabindex="0" role="article" aria-label="Fast Performance feature">
+                <i class="fas fa-rocket"></i>
+                <h3>Fast Performance</h3>
+                <p>Lightning-fast loading and seamless interactions.</p>
+            </div>
+            <div class="feature-card animate-scale" tabindex="0" role="article" aria-label="Secure feature">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure</h3>
+                <p>Top-tier security to protect your data.</p>
+            </div>
+            <div class="feature-card animate-scale" tabindex="0" role="article" aria-label="Responsive Design feature">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Responsive Design</h3>
+                <p>Perfect experience on any device.</p>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="features">
-    <div class="container">
-      <h2>Why Choose NolanDex?</h2>
-      <ul class="features-list">
-        <li>Fast Delivery (1-2 Days)</li>
-        <li>Affordable (Start from Rp200.000)</li>
-        <li>No Technical Skills Needed</li>
-        <li>Free Support</li>
-      </ul>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="about" role="region" aria-label="About Us">
+        <h2 class="section-title animate-slide-up">About Us</h2>
+        <div class="about-content">
+            <p class="animate-fade-in">We are a passionate team building cutting-edge technology to empower businesses and individuals worldwide.</p>
+            <a href="#contact" class="cta-button animate-pulse" role="button" aria-label="Learn more about us">Learn More</a>
+        </div>
+    </section>
 
-  <section id="testimonials">
-    <div class="container">
-      <h2>Testimonials</h2>
-      <div class="testimonial">
-        <p>“NolanDex helped me go online and get clients fast. Super recommended!”</p>
-        <span>- Happy Client</span>
-      </div>
-    </div>
-  </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials" role="region" aria-label="Testimonials">
+        <h2 class="section-title animate-slide-up">What Our Clients Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card animate-slide-left" role="article" aria-label="Client testimonial 1">
+                <p>"This platform transformed our business with its speed and reliability."</p>
+                <h4>Jane Doe, CEO</h4>
+            </div>
+            <div class="testimonial-card animate-slide-right" role="article" aria-label="Client testimonial 2">
+                <p>"The team provided exceptional support and innovative solutions."</p>
+                <h4>John Smith, CTO</h4>
+            </div>
+        </div>
+    </section>
 
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <form id="contactForm">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
+    <!-- CTA Section -->
+    <section id="cta" class="cta" role="region" aria-label="Call to Action">
+        <h2 class="section-title animate-slide-up">Ready to Start?</h2>
+        <p class="animate-fade-in">Join thousands of satisfied users and take your business to the next level.</p>
+        <a href="#contact" class="cta-button animate-pulse" role="button" aria-label="Sign up now">Sign Up Now</a>
+    </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 NolanDex. All rights reserved.</p>
-    </div>
-  </footer>
+    <!-- Contact Section -->
+    <section id="contact" class="contact" role="region" aria-label="Contact Form">
+        <h2 class="section-title animate-slide-up">Get in Touch</h2>
+        <form class="contact-form animate-fade-in" role="form" aria-label="Contact us form">
+            <input type="text" placeholder="Name" required aria-required="true" aria-label="Your name">
+            <input type="email" placeholder="Email" required aria-required="true" aria-label="Your email">
+            <textarea placeholder="Message" required aria-required="true" aria-label="Your message"></textarea>
+            <button type="submit" class="cta-button" aria-label="Send message">Send Message</button>
+        </form>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <p>© 2025 Brand. All rights reserved.</p>
+        <div class="social-links" role="navigation" aria-label="Social media links">
+            <a href="#" class="animate-scale" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="animate-scale" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="animate-scale" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
-</html>
+  </html>
